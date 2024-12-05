@@ -22,7 +22,15 @@
 
 
 ## Milestone 3: Project Overview
+
  1. Set up specified folders which is used for the backend.
  2. Initialized and configured the Node.js server
  3. Connected to the MongoDB
  4. Provided clear error messages for debugging.
+
+
+## Milestone 4: Project Overview
+
+1. Created a user model which is like a blueprint to how the user's data will be stored in the database.
+2. Created a user control which helps you manage whatever changes happens in your user data.
+3. Enabled and configured multer which allows the app to accept the files which are uploaded by the user.
