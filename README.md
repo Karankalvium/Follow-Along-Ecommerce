@@ -34,3 +34,8 @@
 1. Created a user model which is like a blueprint to how the user's data will be stored in the database.
 2. Created a user control which helps you manage whatever changes happens in your user data.
 3. Enabled and configured multer which allows the app to accept the files which are uploaded by the user.
+
+## Milestone 5: Project Overview
+
+1. Created a sign up page where the user can enter their details i.e. to create a account this includes name, email, password.
+2. Created a form validation which checks the entered information is correct and also in the right format, this basically prevents errors and ensures backend recieves clean and right data.
