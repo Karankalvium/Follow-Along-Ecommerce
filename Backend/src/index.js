@@ -1,7 +1,7 @@
 if(process.env.NODE_ENV !== 'PRODUCTION')
 {
     require('dotenv').config({
-        path: './src/config/.env',
+    path: './src/config/.env',
     });
 }
 const connectDatabase = require('./DB/database.js');
@@ -10,5 +10,5 @@ const PORT = process.env.PORT;
 
 const server = app.listen(PORT, async () => {
     connectDatabase();
-    console.log('The Server is running on Port: 8080 URL: http://localhost:8080');
+    console.log(`Server is running on ${PORT} url: http://localhost:${PORT}`);
 });
