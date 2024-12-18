@@ -40,7 +40,7 @@
 1. Created a sign up page where the user can enter their details i.e. to create a account this includes name, email, password.
 2. Created a form validation which checks the entered information is correct and also in the right format, this basically prevents errors and ensures backend recieves clean and right data.
 
-## Milestone 5: Project Overview
+## Milestone 7: Project Overview
 
 1. Encrypting of the password is done using bcrypt.
 2. Bcrypt is basically used to hash the password entered by the user to ensure safety.
@@ -48,3 +48,8 @@
 4. Using the credentials we fetch the user from the database.
 5. Validation of password: This is done to compare the password entered by the user to the password which is stored in hash.
 6. If the password matches we proceed with authentication if it is not authenticated we have to send an error to the user 
+
+## Milestone 8: Project Overview
+
+1. Created the Card Component: Designed a reusable card components , the card shows the details of the product such as name, image and price.
+2. Designed the Homepage Layout: We created a flexbox or a grid layout which can be used to display many cards neatly.
