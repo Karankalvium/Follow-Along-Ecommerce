@@ -48,3 +48,8 @@
 4. Using the credentials we fetch the user from the database.
 5. Validation of password: This is done to compare the password entered by the user to the password which is stored in hash.
 6. If the password matches we proceed with authentication if it is not authenticated we have to send an error to the user 
+
+## Milestone 8: Project Overview
+
+1. Created the Card Component: Designed a reusable card components , the card shows the details of the product such as name, image and price.
+2. Designed the Homepage Layout: We created a flexbox or a grid layout which can be used to display many cards neatly.
