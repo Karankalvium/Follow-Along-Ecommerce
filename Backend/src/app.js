@@ -10,6 +10,7 @@ const express = require('express');
 const connectDatabase = require('./DB/database.js');
 
 const app = express();
+app.use(express.json());
 const userRouter = require 
 app.get('/', (req, res) => {
     return res.send('Welcome to backend');
