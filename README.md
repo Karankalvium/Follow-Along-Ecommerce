@@ -40,7 +40,7 @@
 1. Created a sign up page where the user can enter their details i.e. to create a account this includes name, email, password.
 2. Created a form validation which checks the entered information is correct and also in the right format, this basically prevents errors and ensures backend recieves clean and right data.
 
-## Milestone 5: Project Overview
+## Milestone 7: Project Overview
 
 1. Encrypting of the password is done using bcrypt.
 2. Bcrypt is basically used to hash the password entered by the user to ensure safety.
