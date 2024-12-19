@@ -53,3 +53,14 @@
 
 1. Created the Card Component: Designed a reusable card components , the card shows the details of the product such as name, image and price.
 2. Designed the Homepage Layout: We created a flexbox or a grid layout which can be used to display many cards neatly.
+
+## Milestone 9: Project Overview
+
+1. Created a product input form.
+2. This form allows users to add detailed information about new products that will be displayed on the product homepage.
+3. Key Features:
+
+    i)	Product Details Input:
+	•	Users can provide essential details such as the product name, description, category, price, and stock quantity.
+	ii)	Multiple Image Upload:
+	•	The form supports uploading multiple images for a single product, enabling a comprehensive visual representation.
