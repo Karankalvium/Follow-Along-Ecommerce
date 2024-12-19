@@ -1,5 +1,5 @@
-import { useState } from 'react';
-import Card from '../component/ProductCard/Card';
+import { useEffect, useState } from 'react';
+import Card from '../components/authorization/ProductCard/Card';
 
 function HomePage() {
   const [data, setdata] = useState(
