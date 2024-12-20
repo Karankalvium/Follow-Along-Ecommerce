@@ -64,3 +64,10 @@
 	•	Users can provide essential details such as the product name, description, category, price, and stock quantity.
 	ii)	Multiple Image Upload:
 	•	The form supports uploading multiple images for a single product, enabling a comprehensive visual representation.
+
+## Milestone 10: Project Overview
+
+1.	Product Schema: Defines the structure of product data with validation.
+2.	POST Endpoint: Allows for adding products with validation.
+3.	Data Integrity: Ensures only valid data is saved.
+4.	Future Enhancements: Features like admin access and shop profiles can be added.
