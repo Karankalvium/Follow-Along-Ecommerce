@@ -71,3 +71,9 @@
 2.	POST Endpoint: Allows for adding products with validation.
 3.	Data Integrity: Ensures only valid data is saved.
 4.	Future Enhancements: Features like admin access and shop profiles can be added.
+
+## Milestone 11: Project Overview
+
+1.	Wrote an endpoint that retrieves all products stored in MongoDB and sends it as a response.
+2.	Receive the data on the frontend and display it dynamically.
+3.	Pass the data to the ProductCard component to render each product dynamically.
