@@ -77,3 +77,9 @@
 1.	Wrote an endpoint that retrieves all products stored in MongoDB and sends it as a response.
 2.	Receive the data on the frontend and display it dynamically.
 3.	Pass the data to the ProductCard component to render each product dynamically.
+
+## Milestone 12: Project Overview
+
+1.	Wrote an endpoint that retrieved products from MongoDB, filtering them by the user’s email address.
+2.	Fetched and received data on the frontend via an API call.
+3.	Dynamically displayed the data on the frontend by passing it to the product card component we created earlier.
