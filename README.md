@@ -83,3 +83,23 @@
 1.	Wrote an endpoint that retrieved products from MongoDB, filtering them by the user’s email address.
 2.	Fetched and received data on the frontend via an API call.
 3.	Dynamically displayed the data on the frontend by passing it to the product card component we created earlier.
+
+## Milestone 13: Project Overview
+
+Backend Update
+	1.	PUT Route for Updating Data:
+	•	A PUT route was added to the backend API.
+	•	This route allows updating the details of an existing product in the database.
+
+Frontend Updates:
+	2.	Button Added to Each Product Card:
+	•	A button was added to each product card on the user interface.
+	•	This button is used to open a form where the user can input new data for the product.
+
+	3.	Form for Inputting New Data:
+	•	When the button is clicked, a form pops up.
+	•	The form allows the user to enter updated information for that specific product.
+	
+	4.	Data Submission to Backend:
+	•	Once the form is submitted, the updated data is sent to the backend via the PUT route.
+	•	The backend processes this request and updates the product’s data in the database.
