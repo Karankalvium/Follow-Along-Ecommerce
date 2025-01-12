@@ -17,6 +17,12 @@ function HomePage() {
     callProducts();
   },[]);
 
+  const handleDelete = async (id) => {
+    console.log('id', id);
+    const data = await axios.delete(`http://localhost:8080/product/${id}`);
+    setdata(data.data.data);
+  };
+
 
   return (
     <>
@@ -35,6 +41,8 @@ function HomePage() {
                 discountedPrice={ele.discountedPrice}
                 rating={ele.rating}
                 id={ele._id}
+                handleDelete={handleDelete}
+
                  />
               </div>
             
