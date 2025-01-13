@@ -19,7 +19,7 @@ function HomePage() {
 
   const handleDelete = async (id) => {
     console.log('id', id);
-    const data = await axios.delete(`http://localhost:8080/product/${id}`);
+    const data = await axios.delete(`http://localhost:8000/product/${id}`);
     setdata(data.data.data);
   };
 
