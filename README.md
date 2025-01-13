@@ -147,3 +147,8 @@ Frontend Updates:
  
  •	A mobile-friendly hamburger menu is implemented for smaller devices.
 
+## Milestone 16: Project Overview
+
+1. We created single product page which gives the details of single product
+2. We created Image Modal component.
+
