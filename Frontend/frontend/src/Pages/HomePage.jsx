@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import Card from '../components/authorization/ProductCard/Card';
+import Card from '../components/ProductCard/Card.jsx';
 import axios from 'axios';
 
 function HomePage() {
