@@ -152,3 +152,33 @@ Frontend Updates:
 1. We created single product page which gives the details of single product
 2. We created Image Modal component.
 
+## Milestone 17: Project Overview
+
+1. Cart Schema (cart.model.js)
+
+• 	Defines the database structure for storing cart data. It includes fields such as productId, quantity, and userId to track the products and their association with users.
+
+2. Cart Route (cart.route.js)
+
+• 	Provides a dedicated route /add-to-cart, which connects to the AddToCartController for handling product additions to the cart.
+
+3. Cart Controller (cart.controller.js)
+
+Handles the business logic for adding items to the user’s cart:
+
+	•	Validates productId and userId to ensure proper input.
+
+	•	Checks if the product is already present in the user’s cart.
+
+	•	If validation passes, the product is added to the cart.
+
+4. Middleware (jwt-verify.js)
+
+•	Verifies user authentication by checking the provided token. Once validated, it attaches the userId to the request for further processing of cart-related actions.
+
+5. Integration in app.js
+
+•	Registers the cart routes under the /cart path, ensuring that all endpoints related to the cart are accessible.
+
+
+

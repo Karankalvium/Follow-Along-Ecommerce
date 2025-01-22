@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { Upload } from 'lucide-react';
 import axios from 'axios';
 function ProductEntryPage() {
   const [formData, setFormData] = useState({
@@ -29,11 +28,6 @@ function ProductEntryPage() {
     });
     console.log(formData);
   };
-  // 1. take all enteries from the user and store it in use STATES
-  //   e.target.value;
-  //   setdata(...,[name]:value)
-  // 2. take those images and store in another use state
-  // 1. convert the all the image paths and set the state
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log(formData);
@@ -65,14 +59,16 @@ function ProductEntryPage() {
     formDataBody.append('originalPrice', originalPrice);
     formDataBody.append('quantity', quantity);
     formDataBody.append('rating', rating);
+    formDataBody.append('token', localStorage.getItem('token'));
+    
 
     Images.map((ele) => {
       formDataBody.append('files', ele);
     });
 
     console.log(formDataBody);
-    // axios request post
-    axios.post('http://localhost:8000/product/create-product', formData, {
+    const token = localStorage.getItem('token');
+    axios.post( `http://localhost:8000/product/create-product?token=${token}`, formDataBody, {
       headers: {
         'Content-Type': 'multipart/form-data',
       },
