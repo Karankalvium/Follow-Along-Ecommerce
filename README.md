@@ -180,5 +180,18 @@ Handles the business logic for adding items to the user’s cart:
 
 •	Registers the cart routes under the /cart path, ensuring that all endpoints related to the cart are accessible.
 
+## Milestone 18: Project Overview
+
+1. Cart Route (cart.route.js)
+
+•	Introduces the /get-user-cart-data endpoint, which is linked to the GetProductsForUser controller. This endpoint is designed to retrieve items from the user’s cart.
+
+2. Cart Controller (cart.controller.js)
+
+Handles the logic for fetching cart items for authenticated users:
+
+•	Confirms the validity of the provided userId.
+•	Retrieves the user’s cart data from the database to ensure accurate and up-to-date information.
+
 
 
