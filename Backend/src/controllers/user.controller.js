@@ -5,6 +5,7 @@ const jwt = require('jsonwebtoken'); //tokenisation of user data (every communic
 const bcrypt = require('bcrypt'); //hashes the password only
 const cloudinary = require('../utils/cloudinary.js');
 const fs = require('fs');
+const { default: mongoose } = require('mongoose');
 
 require('dotenv').config({
   path: '../config/.env',
@@ -165,4 +166,27 @@ const login = async (req, res) => {
   }
 };
 
-module.exports = { CreateUSer, verifyUserController, signup, login };
+const getUserData = async (req, res) => {
+  const userId = req.UserId;
+  try {
+    if (!mongoose.Types.ObjectId.isValid(userId)) {
+      return res.status(401).send({ message: 'Send Valid User Id' });
+    }
+
+    const checkUserPresentinDB = await UserModel.findOne({ _id: userId });
+    if (!checkUserPresentinDB) {
+      return res
+        .status(401)
+        .send({ message: 'Please Signup, user not present' });
+    }
+
+    return res.status(200).send({ data: checkUserPresentinDB });
+  } catch (er) {
+    return res.status(500).send({ message: er.message });
+  }
+};
+
+
+
+
+module.exports = { CreateUSer, verifyUserController, signup, login, getUserData };

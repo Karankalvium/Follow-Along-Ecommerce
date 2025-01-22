@@ -198,8 +198,18 @@ Handles the logic for fetching cart items for authenticated users:
 •	Created Cart Forntend Page and displayed the products.
 •	Fetched the card details of the user
 
+## Milestone 20: Project Overview
 
+•	Created a Backend endpoint which sends us the user data
 
+•	In frontend, created a page where we can view our profile
+
+•	In the profile page the photo, name and email is displayed in a section
+
+• 	In the same page but in another section we have displayed address and a button to 
+	add the address
+
+•	And if there is no address , "No address found" will be displayed
 
 
 
