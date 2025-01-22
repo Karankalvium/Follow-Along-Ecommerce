@@ -7,6 +7,7 @@ import ProductEntryPage from './Pages/ProductEntryPage.jsx';
 import UpdateForm from './Pages/UpdateForm.jsx';
 import Navbar from './components/NavBar/NavBar.jsx';
 import SinglePageProduct from './Pages/SingleProductPage.jsx';
+import CartPage from './Pages/CartPage.jsx';
 
 
 function App() {
@@ -21,6 +22,8 @@ function App() {
       <Route path="/product-entry-page" element={<ProductEntryPage />} />
       <Route path="/update-form/:id" element={<UpdateForm />}/>
       <Route path="/product-details/:id" element={<SinglePageProduct />} />
+      <Route path="/cart" element={<CartPage />} />
+
     </Routes>
     </div>
   );

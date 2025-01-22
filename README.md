@@ -193,5 +193,15 @@ Handles the logic for fetching cart items for authenticated users:
 •	Confirms the validity of the provided userId.
 •	Retrieves the user’s cart data from the database to ensure accurate and up-to-date information.
 
+## Milestone 19: Project Overview
+
+•	Created Cart Forntend Page and displayed the products.
+•	Fetched the card details of the user
+
+
+
+
+
+
 
 
