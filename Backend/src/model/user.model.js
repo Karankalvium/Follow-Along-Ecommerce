@@ -13,13 +13,28 @@ const userSchema = new mongoose.Schema(
       required: [true, 'Please enter the password...'],
     },
     address: [
-      { city: String },
-      { country: String },
-      { add1: String },
-      { add2: String },
-      { zipCode: String },
-      { addressType: String },
+      {
+        city: {
+          type: String,
+        },
+        country: {
+          type: String,
+        },
+        address1: {
+          type: String,
+        },
+        address2: {
+          type: String,
+        },
+        zipCode: {
+          type: Number,
+        },
+        addressType: {
+          type: String,
+        },
+      },
     ],
+
     role: { type: String, default: 'user' },
     avatar: {
       url: { type: String, required: true },
