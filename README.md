@@ -211,7 +211,8 @@ Handles the logic for fetching cart items for authenticated users:
 
 •	And if there is no address , "No address found" will be displayed
 
+## Milestone 21: Project Overview
 
-
+• Created a frontend part for the address information where the user can enter the address
 
 
