@@ -215,7 +215,7 @@ Handles the logic for fetching cart items for authenticated users:
 
 • Created a frontend part for the address information where the user can enter the address
 
-## Milestone 21: Project Overview
+## Milestone 22: Project Overview
 
 • Created a backend endpoint that will store the address which is entered by the user inside the userprofile in database.
 
