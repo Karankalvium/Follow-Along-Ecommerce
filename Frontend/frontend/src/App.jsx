@@ -9,6 +9,8 @@ import Navbar from './components/NavBar/NavBar.jsx';
 import SinglePageProduct from './Pages/SingleProductPage.jsx';
 import CartPage from './Pages/CartPage.jsx';
 import ProfilePage from './Pages/Profile.jsx';
+import AddressCard from './components/AddressComp/AddressCard.jsx';
+
 
 
 
@@ -20,12 +22,12 @@ function App() {
       <Route path='/' element={<HomePage/>}/>
       <Route path="/signup" element={<Signup />} />
       <Route path="/login" element={<Login />} />
-      <Route path="/" element={<HomePage />} />
       <Route path="/product-entry-page" element={<ProductEntryPage />} />
       <Route path="/update-form/:id" element={<UpdateForm />}/>
       <Route path="/product-details/:id" element={<SinglePageProduct />} />
       <Route path="/cart" element={<CartPage />} />
       <Route path="/profile" element={<ProfilePage />} />
+      <Route path="/address" element={<AddressCard />} /> 
 
     </Routes>
     </div>
