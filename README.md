@@ -232,3 +232,8 @@ Handles the logic for fetching cart items for authenticated users:
 • Created a page that will display all the available address, this also an option to select any one of the address.
 
 • Created a backend endpoint that will send all the saved addresses of the user.
+
+## Milestone 24: Project Overview
+
+• In this we created a order confirmation page in which it has all the products which was already added in the cart and also it shows the total amount of the products which is there in the cart.
+
