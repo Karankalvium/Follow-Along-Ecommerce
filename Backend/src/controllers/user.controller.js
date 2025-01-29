@@ -217,5 +217,26 @@ const AddAddressController = async (req, res) => {
   }
 };
 
+const GetAddressConroller = async (req, res) => {
+  const userId = req.UserId;
+  try {
+    if (!mongoose.Types.ObjectId.isValid(userId)) {
+      return res.status(401).send({ message: 'Please login, un-Authorised' });
+    }
+    const checkUser = await UserModel.findOne({ _id: userId }, { address: 1 });
+    if (!checkUser) {
+      return res.status(401).send({ message: 'Please signup, un-Authorised' });
+    }
 
-module.exports = { CreateUSer, verifyUserController, signup, login, getUserData, AddAddressController};
+    return res.status(200).send({
+      userInfo: checkUser,
+      message: 'Success',
+      success: true,
+    });
+  } catch (er) {
+    return res.status(500).send({ message: er.message });
+  }
+};
+
+
+module.exports = { CreateUSer, verifyUserController, signup, login, getUserData, AddAddressController, GetAddressConroller};

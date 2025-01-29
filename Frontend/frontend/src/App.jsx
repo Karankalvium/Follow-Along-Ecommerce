@@ -10,6 +10,7 @@ import SinglePageProduct from './Pages/SingleProductPage.jsx';
 import CartPage from './Pages/CartPage.jsx';
 import ProfilePage from './Pages/Profile.jsx';
 import AddressCard from './components/AddressComp/AddressCard.jsx';
+import SelectAddres from './Pages/SelectAddressPage.jsx';
 
 
 
@@ -27,7 +28,8 @@ function App() {
       <Route path="/product-details/:id" element={<SinglePageProduct />} />
       <Route path="/cart" element={<CartPage />} />
       <Route path="/profile" element={<ProfilePage />} />
-      <Route path="/add-address" element={<AddressCard />} /> 
+      <Route path="/add-address" element={<AddressCard />} />
+      <Route path="/select-address" element={<SelectAddres />} /> 
 
     </Routes>
     </div>
