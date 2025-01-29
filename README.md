@@ -222,3 +222,13 @@ Handles the logic for fetching cart items for authenticated users:
 • User authentication for adding the address details.
 
 • After the address is added it is displayed in the user profile list.
+
+## Milestone 23: Project Overview
+
+• Created a placeorder button inside cart page.
+
+• When the placeorder is clicked it's navigated to the select address page.
+
+• Created a page that will display all the available address, this also an option to select any one of the address.
+
+• Created a backend endpoint that will send all the saved addresses of the user.
