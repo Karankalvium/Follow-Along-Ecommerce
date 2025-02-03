@@ -243,6 +243,14 @@ Handles the logic for fetching cart items for authenticated users:
 
 • Also we have created a mailing system i.e., you will retrive the id of the user.
 
-•  Also each products are different and have the same address 
+• Also each products are different and have the same address 
 
 • Also created a order schema whihc helps to store the order details easily in the database
+
+## Milestone 26: Project Overview
+
+• We created an endpoint that will recieve user emails.
+
+• Using the id we get to know what they have ordered.
+
+. We also sent all the orders in the response.
