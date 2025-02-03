@@ -237,3 +237,12 @@ Handles the logic for fetching cart items for authenticated users:
 
 • In this we created a order confirmation page in which it has all the products which was already added in the cart and also it shows the total amount of the products which is there in the cart.
 
+## Milestone 25: Project Overview
+
+• We created an endpoint that receive the details of the products, user and also the address.
+
+• Also we have created a mailing system i.e., you will retrive the id of the user.
+
+•  Also each products are different and have the same address 
+
+• Also created a order schema whihc helps to store the order details easily in the database
