@@ -10,16 +10,23 @@ export default function CartCard({
   rating,
   id,
   createdBy,
+  orderStatus,
 }) {
   return (
     <div className="max-w-4xl mx-auto bg-white rounded-lg shadow p-4">
+      {orderStatus && (
+        <div className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm w-[18%] text-center mb-5">
+          {orderStatus}
+        </div>
+      )}
       <div className="flex gap-6">
         {/* Product Image */}
+
         <div className="relative w-64">
           <Link to={`/product-details/${id}`}>
             <img
-              src={typeof images == 'string' ? images : images[0]}
-              alt="Product Image"
+            src={Array.isArray(images) && images.length > 0 ? images[0] : images || '/default-image.jpg'}              
+            alt="Product Image"
               className="rounded-lg object-cover"
             />
           </Link>

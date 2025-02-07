@@ -1,5 +1,7 @@
 const { default: mongoose } = require('mongoose');
 const OrderModel = require('../model/order.model.js');
+const CartModel = require('../model/cart.model.js');
+const UserModel = require('../model/user.model.js');
 
 async function CreateOrderController(req, res) {
   const userId = req.UserId;
@@ -23,15 +25,26 @@ async function CreateOrderController(req, res) {
         .send({ message: 'Items not present', success: false });
     }
 
-    const order = await OrderModel.create({
-      user: userId,
-      orderItems: Items,
-      shippingAddress: address,
-      totalAmount: totalAmount,
+    const order = Items.map(async (ele) => {
+      return await OrderModel.create({
+        user: userId,
+        orderItems: ele.productId._id,
+        shippingAddress: address,
+        totalAmount: totalAmount,
+      });
     });
-    return res
-      .status(201)
-      .send({ message: 'Data Successfully fetched', success: true, order });
+    await Promise.all(order);
+
+    const ItemsMapped = Items.map(async (eachItem) => {
+      return await CartModel.findByIdAndDelete({ _id: eachItem._id });
+    });
+    const checkDeletedItems = await Promise.all(ItemsMapped);
+
+    return res.status(201).send({
+      message: 'Data Successfully fetched',
+      success: true,
+      checkDeletedItems,
+    });
   } catch (er) {
     return res.status(500).send({ message: er.message, success: false });
   }
@@ -51,8 +64,11 @@ async function GetUserOrdersController(req, res) {
           .status(400)
           .send({ message: 'Please sign up', success: false });
       }
+      const orders = await OrderModel.find({
+        user: userId,
+        orderStatus: { $ne: 'Cancelled' },
+      }).populate('orderItems');
   
-      const orders = await OrderModel.find({ user: userId });
       return res
         .status(200)
         .send({ message: 'Data Successfully fetched', success: true, orders });
