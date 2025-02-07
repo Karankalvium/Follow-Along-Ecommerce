@@ -254,3 +254,11 @@ Handles the logic for fetching cart items for authenticated users:
 • Using the id we get to know what they have ordered.
 
 . We also sent all the orders in the response.
+
+## Milestone 27: Project Overview
+
+• Created my orders page.
+
+• Display all the orders in the orders page.
+
+• Adding my orders page in the navigation bar to make it easily accessible.
