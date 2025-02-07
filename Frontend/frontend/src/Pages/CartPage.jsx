@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-import CartCard from '../components/ProductCard/CartCard.jsx';
+import CartCard from '../components/ProductCard/CartCard';
 import { Link } from 'react-router-dom';
-
 function CardPage() {
   const [UsersCartData, setUsersCartData] = useState([]);
 
@@ -23,27 +22,35 @@ function CardPage() {
   }, []);
   return (
     <div>
-      <Link to={`/select-address`}>
-        <button className="bg-slate-800 text-white px-5 py-2 rounded-md ml-40">
-          Checkout
-        </button>
-      </Link>
-      {UsersCartData?.map((singleCartObject, index) => {
-        return (
-          <div key={index}>
-            <CartCard
-              title={singleCartObject.productId.title}
-              image={singleCartObject.productId.images[0]}
-              //   Index={index}
-              description={singleCartObject.productId.description}
-              originalPrice={singleCartObject.productId.originalPrice}
-              discountedPrice={singleCartObject.productId.discountedPrice}
-              id={singleCartObject._id}
-              createdBy={'karan'}
-            />
-          </div>
-        );
-      })}
+      {UsersCartData.length > 0 ? (
+        <>
+          <Link to={`/select-address`}>
+            <button className="bg-slate-800 text-white px-5 py-2 rounded-md ml-40">
+              Checkout
+            </button>
+          </Link>
+          {UsersCartData?.map((singleCartObject, index) => {
+            return (
+              <div key={index}>
+                <CartCard
+                  title={singleCartObject.productId.title}
+                  images={singleCartObject.productId.images[0]}
+                  //   Index={index}
+                  description={singleCartObject.productId.description}
+                  originalPrice={singleCartObject.productId.originalPrice}
+                  discountedPrice={singleCartObject.productId.discountedPrice}
+                  id={singleCartObject.productId._id}
+                  createdBy={'karan@g.com'}
+                />
+              </div>
+            );
+          })}
+        </>
+      ) : (
+        <div className="flex justify-center max-h-[100vh] items-center">
+          <h1>Cart is empty</h1>
+        </div>
+      )}
     </div>
   );
 }
