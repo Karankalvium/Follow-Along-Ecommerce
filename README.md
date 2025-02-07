@@ -254,3 +254,21 @@ Handles the logic for fetching cart items for authenticated users:
 • Using the id we get to know what they have ordered.
 
 . We also sent all the orders in the response.
+
+## Milestone 27: Project Overview
+
+• Created my orders page.
+
+• Display all the orders in the orders page.
+
+• Adding my orders page in the navigation bar to make it easily accessible.
+
+## Milestone 28: Project Overview
+
+• In orders page added cancel button.
+
+• If the order was cancelled the button is not displayed.
+
+• Created an endpoint to recieve the order-id.
+
+• Get the order using the id and marking the status cancel once its cancelled.
