@@ -333,3 +333,10 @@ i)Processes payment and stores transaction details.
 
 i)Fetches Razorpay public key for frontend integration.
 
+## Milestone 31: Project Overview
+
+• Use Redux to store and manage the user's email across the application.
+
+• Ensure components can access and update global state efficiently without prop drilling.
+
+• Structure the application to handle state management in a scalable and organized manner using Redux.
