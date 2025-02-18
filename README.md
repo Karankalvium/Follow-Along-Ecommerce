@@ -273,4 +273,63 @@ Handles the logic for fetching cart items for authenticated users:
 
 • Get the order using the id and marking the status cancel once its cancelled.
 
+## Milestone 29 and 30: Project Overview
+
+• In this milestone, the Razorpay payment gateway has been integrated into the project. Users can make payments for their orders seamlessly. The backend handles payment processing, while the frontend provides a smooth user experience for completing transactions.
+
+1. Backend Changes
+
+• Payment Route:
+
+i) Created Payment.route.js to handle payment-related API endpoints.
+
+• Payment Controller:
+
+i) Implemented Payment.controller.js with logic for creating and processing payments.
+
+ii) API to create an order and process payment.
+
+iii) Logging added for debugging Razorpay key verification.
+
+• Payment Model:
+
+i) Defined Payment.model.js to store payment-related data.
+
+• App Configuration:
+
+i) Integrated payment routes into app.js.
+
+ii) Updated .env file with Razorpay API credentials for security.
+
+2. Frontend Changes
+
+• Payment SDK Integration:
+
+i) Added Razorpay checkout script in index.html.
+
+• Utility for Razorpay:
+
+i) Created Razorpay.js to handle payment requests and responses.
+
+• Order Confirmation Page:
+
+i)Integrated handlePay function to initiate payments.
+
+ii)Displays total amount before proceeding to payment.
+
+iii)Redirects users to order history upon successful payment.
+
+3. API Endpoints
+
+• POST /payment/create-order:
+
+i)Creates an order in Razorpay with the specified amount.
+
+• POST /payment/pay-order:
+
+i)Processes payment and stores transaction details.
+
+• GET /payment/get-razorpay-key:
+
+i)Fetches Razorpay public key for frontend integration.
 
