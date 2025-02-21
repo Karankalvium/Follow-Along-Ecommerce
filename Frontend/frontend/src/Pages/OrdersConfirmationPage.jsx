@@ -10,7 +10,9 @@ export default function OrderConfirmation() {
     JSON.parse(localStorage.getItem('address')) || {}
   );
   const navigate = useNavigate();
- 
+  
+  const data = useSelector((state) => state.user);
+
   useEffect(() => {
     const getCartData = async () => {
       const token = localStorage.getItem('token');

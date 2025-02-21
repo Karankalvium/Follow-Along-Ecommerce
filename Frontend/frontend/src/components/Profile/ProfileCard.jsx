@@ -1,5 +1,7 @@
 import axios from 'axios';
 import { useEffect, useState } from 'react';
+import { useSelector } from 'react-redux';
+
 
 const Card = ({ children, className = '' }) => (
   <div className={`bg-white rounded-lg shadow-lg p-6 ${className}`}>
@@ -22,6 +24,8 @@ const InfoSection = ({ icon, label, value }) => (
 );
 export function ProfileCard() {
   const [userData, setUserData] = useState({});
+  const data = useSelector((state) => state.user);
+  console.log(data);
   useEffect(() => {
     const getUserData = async () => {
       const token = localStorage.getItem('token');
@@ -136,15 +140,26 @@ export function ProfileCard() {
             value={
               userData?.address?.length > 0 ? (
                 <ul className="list-disc list-inside">
-                   {userData.address.map((addr, index) => (
-                    <>
-                      <li key={index}>City: {addr.city}</li>
-                      <li key={index}>Country: {addr.country}</li>
-                      <li key={index}>Address 1: {addr.address1}</li>
-                      <li key={index}>Address 2: {addr.address2}</li>
-                      <li key={index}>Pin Code: {addr.zipCode}</li>
+                    {userData.address.map((SingleAddy, index) => (  
+                      <div key={index}>
+                      <button onClick={() => handleDeleteAddy(SingleAddy._id)}>
+                        Delete 👇🏻
+                      </button>
+                      <li key={SingleAddy._id}>City: {SingleAddy.city}</li>
+                      <li key={SingleAddy._id}>
+                        Country: {SingleAddy.country}
+                      </li>
+                      <li key={SingleAddy._id}>
+                        Address 1: {SingleAddy.address1}
+                      </li>
+                      <li key={SingleAddy._id}>
+                        Address 2: {SingleAddy.address2}
+                      </li>
+                      <li key={SingleAddy._id}>
+                        Pin Code: {SingleAddy.zipCode}
+                      </li>
                       <br />
-                    </>
+                      </div>
                   ))}
                 </ul>
               ) : (
