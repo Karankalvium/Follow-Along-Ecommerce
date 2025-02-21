@@ -340,3 +340,45 @@ i)Fetches Razorpay public key for frontend integration.
 • Ensure components can access and update global state efficiently without prop drilling.
 
 • Structure the application to handle state management in a scalable and organized manner using Redux.
+
+## Milestone 32: Project Overview
+
+1.	Global State:
+	
+•	Redux Toolkit stores user email in UsersSlice upon login.
+
+•	useSelector retrieves user info across components.
+
+2.	Cart Management:
+
+•	Fetches cart data from backend.
+
+•	Redux stores cart info, showing dynamic item count.
+
+3.	Order History:
+
+•	API fetch for past orders.
+
+•	Redux tracks and manages order data.
+
+4.	Order Confirmation:
+
+•	Retrieves total price, address, and cart items via useSelector.
+
+5.	Product Entry:
+
+•	Manages product name, price, quantity, and category with useState.
+
+•	Redux stores product info and user-related data.
+
+6.	Address Selection:
+
+•	Fetches user addresses via API.
+
+•	Redux stores and dynamically accesses addresses.
+
+7.	Profile Management:
+
+•	API fetch for user details.
+
+•	Redux manages user info and allows address deletion.
