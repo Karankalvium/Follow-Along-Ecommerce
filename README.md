@@ -382,3 +382,17 @@ i)Fetches Razorpay public key for frontend integration.
 •	API fetch for user details.
 
 •	Redux manages user info and allows address deletion.
+
+## Milestone 33: Project Overview
+
+•	User Login: Generates JWT tokens for authentication.
+
+•	Token Generation: Uses generateToken with environment-based secret keys.
+
+•	Secure Cookies: Stores JWT in HTTP-only, secure, SameSite-Strict cookies.
+
+•	Response Update: Sends login success message with token.
+
+•	Security Features: Protects against XSS & CSRF, ensures HTTPS-only cookies.
+
+•	Token Expiry: Manages session duration with defined expiration.
